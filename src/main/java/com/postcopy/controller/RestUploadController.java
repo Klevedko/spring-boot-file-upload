@@ -27,7 +27,6 @@ public class RestUploadController {
 
     private final Logger logger = LoggerFactory.getLogger(RestUploadController.class);
     private static String UPLOADED_FOLDER =  "/tmp/"; //System.getProperty("user.dir") + "\\";
-    //
 
     //Single file upload
     @PostMapping("/api/upload")
@@ -56,7 +55,7 @@ public class RestUploadController {
                 uploadfile.getOriginalFilename()  + "\n" + "--- Upload time = " + miliseconds + "msec. \\n", new HttpHeaders(), HttpStatus.OK);
     }
 
-    // Multiple file upload
+    // Multiple file
     @PostMapping("/api/upload/multi")
     public ResponseEntity<?> uploadFileMulti(
             @RequestParam("extraField") String extraField,
@@ -91,11 +90,11 @@ public class RestUploadController {
         return new ResponseEntity("Successfully uploaded!", HttpStatus.OK);
     }
 
-    //save file
+    //save
     private void saveUploadedFiles(List<MultipartFile> files) throws IOException {
         for (MultipartFile file : files) {
             if (file.isEmpty()) {
-                continue; //next pls
+                continue;
             }
 
             byte[] bytes = file.getBytes();
