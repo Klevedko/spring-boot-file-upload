@@ -27,7 +27,7 @@ public class RestUploadController {
     private final Logger logger = LoggerFactory.getLogger(RestUploadController.class);
 
     //Save the uploaded file to this folder
-    private static String UPLOADED_FOLDER = System.getProperty("user.dir")+"\\";
+    private static String UPLOADED_FOLDER = "/tmp/";
 
     //Single file upload
     @PostMapping("/api/upload")
