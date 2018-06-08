@@ -4,7 +4,7 @@
   http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mkyong</groupId>
+    <groupId>com.postcopy</groupId>
     <artifactId>spring-boot-file-upload</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>

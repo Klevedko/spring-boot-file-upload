@@ -1,4 +1,4 @@
-package com.mkyong.model;
+package com.postcopy.model;
 
 import org.springframework.web.multipart.MultipartFile;
 

@@ -1,4 +1,4 @@
-package com.mkyong.exception;
+package com.postcopy.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.mkyong.exception;
+package com.postcopy.exception;
 
 public class CustomError {
 

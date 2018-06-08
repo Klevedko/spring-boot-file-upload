@@ -1,0 +1,20 @@
+в                 /etc/systemd/system
+создать файл      postCopyMtr.Service
+с телом
+
+[Unit]
+Description=postCopyMtr
+After=syslog.target
+
+[Service]
+User=tomcat
+ExecStart=/usr/lib/jvm/jre/bin/java -jar /opt/spring-boot-file-upload-1.0.jar --server.port=8099
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
+
+далее
+systemctl start postCopyMtr.Service;
+при замене содержимого демона -
+systemctl daemon-reload
